@@ -1,0 +1,74 @@
+// Variables
+$c-bg: #1E1E1E
+$c-white: #fff
+$c-red: #DB3138
+$c-border-grey: #898989
+
+// Patterns
+/* btn */
+%deff-btn
+	font-family: 'ReformaGroteskDemi'
+	color: $c-white
+	font-weight: 600
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		bottom: 0
+		background-color: $c-red
+		z-index: 1
+		transition: width .2s ease
+	&:hover::before
+			width: 100%
+	& span
+		display: inline-block
+		position: relative
+		z-index: 2
+
+/* decals */
+%decals
+	display: flex
+	justify-content: space-between
+	width: 100%
+	max-width: 140px
+	& span
+		width: 10px
+		height: 10px
+		background-color: $c-red
+		display: inline-block
+		transform: rotate(45deg)
+
+/* title */
+%title
+	font-family: 'ReformaGroteskDemi'
+	color: $c-white
+	font-size: 52px
+	font-weight: 600
+	letter-spacing: 0.05em
+	text-transform: uppercase
+
+/* btn-slider */
+%btn-slider
+	width: 50px
+	height: 50px
+	border: 3px solid $c-red
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	position: absolute
+	content: ''
+	z-index: 5
+	transition: background-color .2s ease
+	svg
+		fill: $c-white
+		width: 12px
+		height: 21px
+		transform: rotate(45deg)
+		transition: fill .2s ease
+	&:hover
+		background-color: $c-white

@@ -1,0 +1,69 @@
+/* Achievements */
+.achievements
+	padding: 90px 0
+	&__inner
+		display: flex
+		justify-content: space-between
+	&--side
+		width: 100%
+		max-width: 636px
+	&__left
+		&-title
+			@extend %title
+			margin-bottom: 45px
+		&-decals
+			@extend %decals
+			margin-bottom: 60px
+		&-text
+			max-width: 526px
+	&__columns
+		display: grid
+		grid-template-columns: 1fr 1fr
+		position: relative
+		&-left
+			border: 1px solid $c-border-grey
+			border-right: none
+			margin-bottom: 40px
+			&::before
+					position: absolute
+					content: ''
+					top: 0
+					bottom: 0
+					left: 50%
+					transform: translateX(-50%)
+					height: 100%
+					width: 1px
+					background-color: $c-border-grey
+		&-right
+			border: 1px solid $c-border-grey
+			border-left: none
+			margin-top: 40px
+		&-item
+			display: flex
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			padding: 0 20px
+			height: 177px
+			& + &
+				border-top: 1px solid $c-border-grey
+			&_title
+				font-family: 'ReformaGroteskDemi'
+				color: $c-red
+				font-size: 52px
+				font-weight: 600
+				& span
+					font-size: 24px
+				&--icon
+					width: 38px
+					height: 46px
+					display: inline-block
+					position: relative
+					&::before
+						position: absolute
+						content: ''
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						background-image: url(../images/icons-pics/cup.svg)

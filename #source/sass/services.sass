@@ -1,0 +1,74 @@
+/* services */
+
+.services
+	padding: 90px 0
+	&__inner
+		text-align: center
+	&__top
+		margin-bottom: 60px
+		&-title
+			@extend %title
+			margin-bottom: 45px
+		&-decals
+			@extend %decals
+			margin: 0 auto
+	&__content
+		&-controls
+			display: flex
+			justify-content: center
+			column-gap: 60px
+			margin-bottom: 80px
+			&_btn
+				font-family: 'ReformaGroteskDemi'
+				color: $c-white
+				font-size: 32px
+				font-weight: 600
+				letter-spacing: 0.05em
+				text-transform: uppercase
+				padding: 20px 40px 15px
+				transition: all .2s ease
+				&:hover:not(.mixitup-control-active)
+					color: $c-red
+				&.mixitup-control-active
+					background-color: $c-red
+		&-cards
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			&_item
+				width: 100%
+				max-width: 306px
+				min-height: 428px
+				border: 1px solid $c-border-grey
+				display: flex
+				flex-direction: column
+				justify-content: center
+				font-family: 'ReformaGroteskDemi'
+				color: $c-white
+				font-weight: 600
+				letter-spacing: 0.05em
+				text-transform: uppercase
+				padding: 0 40px
+				&-icon
+					height: 70px
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					margin-bottom: 20px
+				&-title
+					font-size: 24px
+					margin-bottom: 20px
+				&-text
+					font-size: 16px
+					margin-bottom: 25px
+				&-link
+					@extend %deff-btn
+					font-size: 18px
+					padding: 10px 0 6px 0
+					width: 100%
+					max-width: 116px
+					margin: 0 auto
+					&::before
+						width: 50%
