@@ -53,7 +53,8 @@ var mixer = mixitup('.services__content', {
 		filter: '.category-pasting'
 	},
 	animation: {
-		effects: 'fade',
+		effectsIn: 'fade translateY(100%)',
+		effectsOut: 'fade translateY(100%)',
 		duration: 400,
 		easing: 'ease'
 	}
