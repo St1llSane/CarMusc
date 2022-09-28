@@ -9,6 +9,7 @@
 	background-position: center	
 	margin-bottom: 90px
 	position: relative
+	overflow-x: hidden
 	&__nav
 		padding: 40px 0
 
@@ -24,12 +25,43 @@
 				margin-left: 40px
 			&:hover
 				color: $c-red
+		&-retractable
+			position: absolute
+			content: ''
+			top: 0
+			right: 0
+			width: 360px
+			height: calc(100vh - 191px)
+			display: flex
+			flex-direction: column
+			justify-content: center
+			text-align: right
+			background: linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5))
+			transform: translateX(100%)
+			transition: transform .25s ease-out
+			&_item
+				font-size: 34px
+				letter-spacing: 0.05em
+				a
+					display: block
+					padding: 20px 0 20px 0
+					transition: all .2s ease-in-out
+					border-top: 1px solid transparent
+					border-bottom: 1px solid transparent
+					padding-right: 25px
+					&:hover
+						color: $c-red
+						background-color: rgba(0, 0, 0, .2)
+						border-color: $c-red
+			&.active
+				transform: translateX(0)
 
 .burger
 	width: 50px
 	height: 25px
 	display: block
 	position: relative
+	z-index: 10
 	&::before,
 	&::after
 		position: absolute
@@ -41,8 +73,10 @@
 		background-color: $c-red
 	&::before
 		top: 0
+		transition: all .2s ease
 	&::after
 		bottom: 0
+		transition: all .2s ease
 	span
 		height: 3px
 		background-color: $c-red
@@ -51,9 +85,30 @@
 		top: 11px
 		width: 100%
 		left: -8px
-		transition: all .2s ease
+		transition: left .2s ease, opacity .1s linear, background-color .2s ease
 	&:hover span
 		left: -18px
+	&:hover::before,
+	&:hover::after,
+	&:hover span
+		background-color: $c-white
+	&.active::before,
+	&.active::after,
+	&.active span
+		background-color: #fff
+	&.active span
+		left: 800%
+		opacity: 0
+		pointer-events: none
+	&.active::before
+		transform: rotate(45deg)
+		top: 11px
+	&.active::after
+		transform: rotate(-45deg)
+		bottom: 11px
+	&.active:hover:before,
+	&.active:hover:after
+		background-color: $c-red
 
 .header__content
 	text-align: center
