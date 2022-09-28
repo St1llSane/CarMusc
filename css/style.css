@@ -137,6 +137,7 @@ body {
   background-position: center;
   margin-bottom: 90px;
   position: relative;
+  overflow-x: hidden;
 }
 .header__nav {
   padding: 40px 0;
@@ -159,12 +160,48 @@ body {
 .nav__list-item:hover {
   color: #DB3138;
 }
+.nav__list-retractable {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: calc(100vh - 191px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  transform: translateX(100%);
+  transition: transform 0.25s ease-out;
+}
+.nav__list-retractable_item {
+  font-size: 34px;
+  letter-spacing: 0.05em;
+}
+.nav__list-retractable_item a {
+  display: block;
+  padding: 20px 0 20px 0;
+  transition: all 0.2s ease-in-out;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding-right: 25px;
+}
+.nav__list-retractable_item a:hover {
+  color: #DB3138;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: #DB3138;
+}
+.nav__list-retractable.active {
+  transform: translateX(0);
+}
 
 .burger {
   width: 50px;
   height: 25px;
   display: block;
   position: relative;
+  z-index: 10;
 }
 .burger::before, .burger::after {
   position: absolute;
@@ -177,9 +214,11 @@ body {
 }
 .burger::before {
   top: 0;
+  transition: all 0.2s ease;
 }
 .burger::after {
   bottom: 0;
+  transition: all 0.2s ease;
 }
 .burger span {
   height: 3px;
@@ -189,10 +228,32 @@ body {
   top: 11px;
   width: 100%;
   left: -8px;
-  transition: all 0.2s ease;
+  transition: left 0.2s ease, opacity 0.1s linear, background-color 0.2s ease;
 }
 .burger:hover span {
   left: -18px;
+}
+.burger:hover::before, .burger:hover::after, .burger:hover span {
+  background-color: #fff;
+}
+.burger.active::before, .burger.active::after, .burger.active span {
+  background-color: #fff;
+}
+.burger.active span {
+  left: 800%;
+  opacity: 0;
+  pointer-events: none;
+}
+.burger.active::before {
+  transform: rotate(45deg);
+  top: 11px;
+}
+.burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+.burger.active:hover:before, .burger.active:hover:after {
+  background-color: #DB3138;
 }
 
 .header__content {
