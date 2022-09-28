@@ -22,7 +22,50 @@
 				font-weight: 600
 				letter-spacing: 0.05em
 				text-transform: uppercase
+				padding-left: 100px
 				margin-bottom: 45px
+				position: relative
+				&--first::before,
+				&--second::before,
+				&--third::before,
+				&--fourth::before,
+				&--fifth::before,
+				&--sixth::before
+					position: absolute
+					content: ''
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+				&--first
+					&::before
+						width: 57px
+						height: 70px
+						background-image: url(../images/icons-pics/blank.svg)	
+				&--second
+					&::before
+						width: 70px
+						height: 45px
+						background-image: url(../images/icons-pics/oilcan.svg)	
+				&--third
+					&::before
+						width: 70px
+						height: 70px
+						background-image: url(../images/icons-pics/car.svg)	
+				&--fourth
+					&::before
+						width: 70px
+						height: 56px
+						background-image: url(../images/icons-pics/hand.svg)	
+				&--fifth
+					&::before
+						width: 57px
+						height: 70px
+						background-image: url(../images/icons-pics/blank.svg)	
+				&--sixth
+					&::before
+						width: 70px
+						height: 45px
+						background-image: url(../images/icons-pics/oilcan.svg)
 			&_text
 	&__slider
 		width: 100%

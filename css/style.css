@@ -494,7 +494,47 @@ body {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  padding-left: 100px;
   margin-bottom: 45px;
+  position: relative;
+}
+.about__content-item_title--first::before, .about__content-item_title--second::before, .about__content-item_title--third::before, .about__content-item_title--fourth::before, .about__content-item_title--fifth::before, .about__content-item_title--sixth::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.about__content-item_title--first::before {
+  width: 57px;
+  height: 70px;
+  background-image: url(../images/icons-pics/blank.svg);
+}
+.about__content-item_title--second::before {
+  width: 70px;
+  height: 45px;
+  background-image: url(../images/icons-pics/oilcan.svg);
+}
+.about__content-item_title--third::before {
+  width: 70px;
+  height: 70px;
+  background-image: url(../images/icons-pics/car.svg);
+}
+.about__content-item_title--fourth::before {
+  width: 70px;
+  height: 56px;
+  background-image: url(../images/icons-pics/hand.svg);
+}
+.about__content-item_title--fifth::before {
+  width: 57px;
+  height: 70px;
+  background-image: url(../images/icons-pics/blank.svg);
+}
+.about__content-item_title--sixth::before {
+  width: 70px;
+  height: 45px;
+  background-image: url(../images/icons-pics/oilcan.svg);
 }
 .about__slider {
   width: 100%;
@@ -659,6 +699,7 @@ body {
   width: 50%;
 }
 
+/* works */
 .works {
   padding: 90px 0;
 }
