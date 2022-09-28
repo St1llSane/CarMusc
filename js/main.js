@@ -6,7 +6,7 @@ $(document).ready(function(){
 		margin: 24,
 		loop: true,
 		mouseDrag: false,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 8000,
 		autoplaySpeed: 300,
 	});
@@ -30,7 +30,7 @@ $(document).ready(function(){
 		dots: false,
 		loop: true,
 		mouseDrag: false,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 8000,
 		autoplaySpeed: 300,
 		animateOut: 'fadeOut'
