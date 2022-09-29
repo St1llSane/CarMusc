@@ -1,8 +1,6 @@
 // Big slider
 $(document).ready(function(){
   $(".slider-big__inner").owlCarousel({
-		items: 3,
-		slideBy: 3,
 		dots: false,
 		margin: 24,
 		loop: true,
@@ -10,6 +8,26 @@ $(document).ready(function(){
 		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 300,
+		responsive: {
+			0: {
+				items: 1,
+				slideBy: 1,
+				center: true,
+				autoWidth: true
+			},
+			516: {
+				items: 2,
+				slideBy: 2,
+				margin: 10,
+			},
+			750: {
+				margin: 15,
+			},
+			1050: {
+				items: 3,
+				slideBy: 3,
+			},
+		}
 	});
 });
 
@@ -31,10 +49,26 @@ $(document).ready(function(){
 		dots: false,
 		loop: true,
 		mouseDrag: false,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 300,
-		animateOut: 'fadeOut'
+		animateOut: 'fadeOut',
+		responsive: {
+			0: {
+				items: 1,
+				slideBy: 1,
+				margin: 10
+			},
+			613: {
+				items: 2,
+				slideBy: 2,
+				margin: 15
+			},
+			1051: {
+				items: 1,
+				slideBy: 1,
+			},
+		}
 	});
 });
 

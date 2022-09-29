@@ -1,3 +1,46 @@
+@media (max-height: 880px)
+	/* header */
+	.header__content
+		padding-top: 70px
+
+	.header__bottom-item
+		padding: 26px 10px
+
+@media (max-width: 1500px)
+	.slider-big__wrapper-btn
+		background-color: $c-white
+	.slider-big__wrapper-btn svg
+		fill: $c-red
+	.slider-big__wrapper-btn:hover
+		background-color: $c-red
+	.slider-big__wrapper-btn:hover svg
+		fill: $c-white
+
+@media (max-width: 1230px)
+	/* about */
+	.about__content-item_title
+		font-size: 28px
+		padding-left: 80px
+		margin-bottom: 30px
+	.about__content-item_text
+		font-size: 20px
+	.about__content-item_title--first::before,
+	.about__content-item_title--second::before,
+	.about__content-item_title--third::before
+		background-position: center
+		background-size: cover
+	.about__content-item_title--first::before
+		width: 46px
+		height: 58px
+	.about__content-item_title--second::before
+		width: 59px
+		height: 39px
+	.about__content-item_title--third::before
+		width: 59px
+		height: 59px
+	.about__slider-inner_item p
+		font-size: 16px
+
 @media (max-width: 1050px)
 
 	/* body */
@@ -55,7 +98,125 @@
 	.header__bottom-item_text
 		font-size: 20px
 
+	/* title */
+	%title
+		font-size: 42px
+
+	/* achievements */
+	.achievements__left-title
+		margin-bottom: 35px
+	.achievements__left-decals
+		margin-bottom: 50px
+
+	.achievements__columns-item
+		padding: 0 15px
+	.achievements__columns-item_title
+		font-size: 42px
+		margin-bottom: 5px
+	.achievements__columns-item_title span
+		font-size: 20px
+	.achievements__columns-item_text
+		font-size: 20px
+
+	/* slider-big */
+	.slider-big__wrapper
+		height: auto
+	.slider-big__inner-item_decal
+		height: 50px
+		bottom: 45px
+	.slider-big__inner-item_decal-text
+		max-width: 270px
+		font-size: 15px
+		top: 17px
+		padding: 0 9px
+
+	/* about */
+	.about__inner
+		flex-wrap: wrap
+		gap: 50px
+		min-height: auto
+	.about__content
+		width: 100%
+		max-width: 100%
+		row-gap: 25px
+		text-align: center
+	.about__content-item_title
+		padding-left: 0
+		display: inline-block
+	.about__content-item_title--first::before,
+	.about__content-item_title--second::before,
+	.about__content-item_title--third::before
+		left: -75px
+	.about__content-item
+		max-width: 660px
+	.about__content-item_text
+		max-width: 500px
+		margin: 0 auto
+
+	.about__slider
+		max-width: 100%
+	.about__slider-inner_item img
+		margin-bottom: 25px
+	.about__slider-nav_btn
+		bottom: 40%
+		transform: translateY(-40%) rotate(-45deg)
+		background-color: $c-white
+		&:hover
+			background-color: $c-red
+		svg
+			fill: $c-red
+		&:hover svg
+			fill: $c-white
+	.about__slider-nav_btn-prev
+		margin-left: auto
+		left: 10px
+	.about__slider-nav_btn-next
+		margin-right: auto
+		right: 10px
+
+@media (max-width: 900px)
+	/* achievements */
+	.achievements__inner
+		flex-direction: column
+		column-gap: 0
+		row-gap: 45px
+	.achievements--side
+		max-width: 100%
+	.achievements__left
+		text-align: center
+	.achievements__left-decals
+		margin: 0 auto 40px
+	.achievements__left-text
+		max-width: 100%
+
+	.achievements__columns
+		display: flex
+		flex-wrap: wrap
+	.achievements__columns-left,
+	.achievements__columns-right
+		display: flex
+		flex-wrap: wrap
+		margin: 0
+	.achievements__columns-left
+		border-right: 1px solid $c-border-grey
+		border-bottom: none
+		&::before
+			display: none
+	.achievements__columns-right
+		border-left: 1px solid $c-border-grey
+	.achievements__columns-item + .achievements__columns-item
+		border-top: none
+		border-left: 1px solid $c-border-grey
+	.achievements__columns-item
+		padding: 0 10px
+		width: 25%
+		max-width: 100%
+
 @media (max-width: 750px)
+
+	/* body */
+	body
+		font-size: 20px
 
 	/* decals */
 	%decals
@@ -93,6 +254,51 @@
 	.header__bottom-item_text
 		font-size: 17px
 
+	/* achievements */
+	.achievements__columns-item
+		width: 50%
+		max-width: 100%
+	.achievements__columns-item + .achievements__columns-item
+		border-left: none
+	.achievements__columns-item--first,
+	.achievements__columns-item--third,
+	.achievements__columns-item--fifth,
+	.achievements__columns-item--seventh
+		border-right: 1px solid $c-border-grey
+	.achievements__columns-item--first,
+	.achievements__columns-item--second,
+	.achievements__columns-item--fifth,
+	.achievements__columns-item--sixth
+		border-bottom: 1px solid $c-border-grey
+
+	/* slider-big */
+	.slider-big__inner
+		height: auto
+	.slider-big__inner-item
+		max-height: 260px
+	.slider-big__inner-item_decal
+		height: 65px
+		bottom: 0
+	.slider-big__inner-item_decal-text
+		max-width: 270px
+		font-size: 15px
+		top: 50%
+		transform: translateY(-50%)
+		padding: 0 10px
+	.slider-big__wrapper-btn
+		top: 50%
+		transform: translateY(-50%) rotate(-45deg)
+	.about__slider-nav_btn,
+	.slider-big__wrapper-btn
+		width: 40px
+		height: 40px
+
+	/* about */
+	.about__slider-nav_btn
+		bottom: 48%
+		transform: translateY(-48%) rotate(-45deg)
+		background-color: #fff
+
 @media (max-width: 620px)
 
 	/* header */
@@ -128,8 +334,40 @@
 		&--first
 			font-size: 12px
 
+	/* slider-big */
+	.slider-big__inner-item_decal-text
+		font-size: 14px
+
+	/* about */
+	.about__content
+		row-gap: 20px
+	.about__content-item_title
+		font-size: 25px
+		margin-bottom: 25px
+	.about__content-item_title--first::before,
+	.about__content-item_title--second::before,
+	.about__content-item_title--third::before
+		left: -65px
+	.about__content-item_title--first::before
+		width: 36px
+		height: 44px
+	.about__content-item_title--second::before
+		width: 49px
+		height: 32px
+	.about__content-item_title--third::before
+		width: 49px
+		height: 50px
+
+	.about__content-item_text
+		max-width: 400px
+		margin: 0 auto
+
 @media (max-width: 515px)
-	
+
+	/* title */
+	%title
+		font-size: 34px
+
 	/* header */
 	.header__nav
 		padding: 35px 0
@@ -190,3 +428,58 @@
 		&--first
 			font-size: 15px
 			max-width: 200px
+
+	/* achievements */
+	.achievements__left-title
+		margin-bottom: 25px
+	.achievements__left-decals
+		margin: 0 auto 30px
+
+	.achievements__inner
+		row-gap: 40px
+	.achievements__columns-item
+		height: 160px
+	.achievements__columns-item_title
+		font-size: 38px
+	.achievements__columns-item_title span
+		font-size: 20px
+
+	/* about */
+	.about__inner
+		gap: 40px
+	.about__content-item_title
+		font-size: 24px
+		margin-bottom: 15px
+	.about__content-item_title--first::before,
+	.about__content-item_title--second::before,
+	.about__content-item_title--third::before
+		display: none
+	.about__content-item_text
+		max-width: 340px
+	.about__slider-inner_item img
+		margin-bottom: 20px
+
+@media (max-width: 460px)
+	/* achievements */
+	.achievements__columns-left
+		border-right: none
+	.achievements__columns-right
+		border-right: none
+	.achievements__columns-item
+		width: 100%
+		max-width: 100%
+		border: 1px solid $c-border-grey
+		height: 140px
+	.achievements__columns-item_text
+		max-width: 250px
+		margin: 0 auto
+	.achievements__columns-item--first
+		border-top: none
+		border-left: none
+	.achievements__columns-item--fourth
+		border-bottom: none
+	.achievements__columns-item--fifth
+		border-top: none
+		border-left: none
+	.achievements__columns-item--eighth
+		border-bottom: none
