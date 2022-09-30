@@ -1,6 +1,6 @@
 /* works */
 .works
-	padding: 90px 0
+	@extend %section-padding
 	&__inner
 		&-top
 			text-align: center
@@ -14,7 +14,6 @@
 	&__content
 		display: grid
 		grid-template-columns: repeat(6, 1fr)
-		grid-template-rows: repeat(3, 1fr)
 		&-item
 			max-width: 100%
 			img
