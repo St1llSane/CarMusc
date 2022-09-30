@@ -1749,6 +1749,10 @@ body {
     object-position: 0 25%;
   }
 
+  .slider-big__inner-item_decal {
+    max-width: 100%;
+  }
+
   /* about */
   .about__inner {
     gap: 40px;
