@@ -5,7 +5,7 @@ $(document).ready(function(){
 		margin: 24,
 		loop: true,
 		mouseDrag: false,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 300,
 		responsive: {
@@ -13,7 +13,7 @@ $(document).ready(function(){
 				items: 1,
 				slideBy: 1,
 				center: true,
-				autoWidth: true
+				
 			},
 			516: {
 				items: 2,
