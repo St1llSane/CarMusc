@@ -5,7 +5,7 @@ $(document).ready(function(){
 		margin: 24,
 		loop: true,
 		mouseDrag: false,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 300,
 		responsive: {
@@ -49,7 +49,7 @@ $(document).ready(function(){
 		dots: false,
 		loop: true,
 		mouseDrag: false,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplaySpeed: 300,
 		animateOut: 'fadeOut',
