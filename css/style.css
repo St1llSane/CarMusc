@@ -876,6 +876,14 @@ body {
   }
 }
 @media (max-width: 1230px) {
+  /* header */
+  .burger:hover::before, .burger:hover::after, .burger:hover span {
+    background-color: #DB3138;
+  }
+  .burger.active:hover:before, .burger.active:hover:after {
+    background-color: #fff;
+  }
+
   /* about */
   .about__content-item_title {
     font-size: 28px;

@@ -112,6 +112,5 @@ $('.scrollto a').on('click', function() {
 			duration: 400,   // по умолчанию «400» 
 			easing: "linear" // по умолчанию «swing» 
 	});
-
 	return false;
 });

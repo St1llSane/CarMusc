@@ -1,5 +1,4 @@
 
-
 @media (max-width: 1500px)
 
 	/* slider-big */
@@ -20,6 +19,16 @@
 		padding: 0px 28px
 
 @media (max-width: 1230px)
+
+	/* header */
+	.burger
+		&:hover::before,
+		&:hover::after,
+		&:hover span
+			background-color: $c-red
+		&.active:hover:before,
+		&.active:hover:after
+			background-color: $c-white
 
 	/* about */
 	.about__content-item_title
