@@ -90,7 +90,7 @@ var mixer = mixitup('.services__content', {
 	animation: {
 		effectsIn: 'fade translateY(100%)',
 		effectsOut: 'fade translateY(100%)',
-		duration: 400,
+		duration: 380,
 		easing: 'ease'
 	}
 });
