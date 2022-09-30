@@ -1,10 +1,10 @@
 .about
-	padding: 90px 0
+	@extend %section-padding
 	&__inner
 		min-height: 660px
 		display: flex
 		justify-content: space-between
-		gap: 50px
+		gap: 30px
 	&__content
 		display: flex
 		flex-direction: column
@@ -15,6 +15,10 @@
 		&-item
 			width: 100%
 			max-width: 526px
+			img
+				object-fit: cover
+				background-size: cover
+				background-position: center
 			&_title
 				font-family: 'ReformaGroteskDemi'
 				color: $c-white
