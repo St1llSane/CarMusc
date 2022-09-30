@@ -1741,6 +1741,14 @@ body {
     font-size: 20px;
   }
 
+  /* slider-big */
+  .slider-big__inner-item {
+    max-width: 100%;
+  }
+  .slider-big__inner-item img {
+    object-position: 0 25%;
+  }
+
   /* about */
   .about__inner {
     gap: 40px;
